@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Custom.ShapeAppereance" parent="ShapeAppearance.M3.Comp.TextButton.Container.Shape">
+        <item name="cornerSize">70%</item>
+    </style>
+
+    <style name="Custom.TextApereance" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textAppearance">?attr/textAppearanceBodySmall</item>
+    </style>
+
+</resources>
