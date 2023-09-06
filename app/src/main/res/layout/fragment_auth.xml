@@ -1,64 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginStart="15dp"
     android:layout_marginEnd="15dp"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/outlinedButton"
-        style="?attr/materialButtonOutlinedStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="15dp"
-        android:text="Назад"
-        android:textAppearance="@style/Custom.TextApereance"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        app:icon="@drawable/baseline_chevron_left_24"
-        app:iconPadding="1dp"
-        app:iconSize="24dp"
-        app:iconTint="@color/white"
-        app:shapeAppearance="@style/Custom.ShapeAppereance"
-        app:strokeColor="@color/black"
-        app:strokeWidth="2dp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="15dp"
-        android:maxWidth="250dp"
-        android:text="Регистарция для клиентов банка"
-        android:textColor="@color/white"
-        android:textSize="28sp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="15dp"
-        android:text="Нажимая кнопку продолжить,\n  вы соглашаетесь с условиями участия"
-        android:textAlignment="center"
-        android:textColor="@color/gray"
-        android:textSize="16sp" />
-
-    <Button
-        android:id="@+id/filledTonalButton"
-        style="@style/Widget.Material3.Button.TonalButton"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_marginBottom="15dp"
-        android:backgroundTint="@color/main_pink"
-        android:text="Продолжить"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:shapeAppearance="@style/Custom.ShapeAppereance" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</LinearLayout>
+        <Button
+            android:id="@+id/outlinedButton"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:text="Назад"
+            android:textAppearance="@style/Custom.TextApereance"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:icon="@drawable/baseline_chevron_left_24"
+            app:iconPadding="1dp"
+            app:iconSize="24dp"
+            app:iconTint="@color/white"
+            app:shapeAppearance="@style/Custom.ShapeAppereance"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:maxWidth="250dp"
+            android:text="Регистарция для клиентов банка"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="4"
+            tools:listitem="@layout/auth_item" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:text="Нажимая кнопку продолжить,\n  вы соглашаетесь с условиями участия"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/filledTonalButton"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/main_pink"
+            android:text="Продолжить"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:shapeAppearance="@style/Custom.ShapeAppereance" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

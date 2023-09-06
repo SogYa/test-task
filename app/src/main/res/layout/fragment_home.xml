@@ -42,11 +42,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        app:drawableEndCompat="@drawable/baseline_edit_24"
-        app:drawableTint = "@color/light_gray"
         android:text="dadwa"
         android:textColor="@color/white"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:drawableEndCompat="@drawable/baseline_edit_24"
+        app:drawableTint="@color/light_gray" />
 
     <TextView
         android:id="@+id/textView3"
@@ -57,24 +57,5 @@
         android:text="+79111111111"
         android:textColor="@color/light_gray"
         android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:text="TextView"
-
-        android:textColor="@color/light_gray" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="5dp"
-        android:text="TextView"
-        android:textColor="@color/light_gray" />
 
 </LinearLayout>
