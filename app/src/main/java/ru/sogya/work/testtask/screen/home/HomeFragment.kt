@@ -24,6 +24,12 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+    override fun onStart() {
+        super.onStart()
+        vm.getClientLiveData().observe(viewLifecycleOwner){
+
+        }
+    }
     override fun onDestroy() {
         super.onDestroy()
         _binding = null

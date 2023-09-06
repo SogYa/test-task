@@ -1,6 +1,7 @@
 package ru.sogya.work.testtask.screen.home
 
 import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -27,9 +28,11 @@ class HomeVM @Inject constructor(
                 Log.d("GetClientError", it.message.toString())
             }.map {
                 ClientInfoDomainMapper(it).toPresentation()
-            }.collect{
+            }.collect {
                 clientInfoLiveData.postValue(it)
             }
         }
     }
+
+    fun getClientLiveData(): LiveData<ClientInfoPresentation> = clientInfoLiveData
 }
