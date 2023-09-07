@@ -1,6 +1,5 @@
 package ru.sogya.work.testtask.screen.authorize
 
-import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,7 +11,6 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import ru.sogya.work.testtask.R
-import ru.sogya.work.testtask.TextValidator
 import ru.sogya.work.testtask.databinding.FragmentAuthBinding
 
 
@@ -68,7 +66,6 @@ class AuthFragment : Fragment(R.layout.fragment_auth) {
                                 resources.getColor(R.color.edittext_purple, null)
                             textInputNumber.error = null
                         }
-
                     }
                 }
             })

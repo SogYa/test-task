@@ -1,4 +1,4 @@
-package ru.sogya.work.testtask
+package ru.sogya.work.testtask.screen.authorize
 
 import android.text.Editable
 import android.text.TextWatcher
