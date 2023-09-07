@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import ru.sogya.work.testtask.domain.usecase.GetClientInfoUseCase
 import ru.sogya.work.testtask.mapper.ClientInfoDomainMapper
-import ru.sogya.work.testtask.mdoel.ClientInfoPresentation
+import ru.sogya.work.testtask.model.ClientInfoPresentation
 import javax.inject.Inject
 
 @HiltViewModel

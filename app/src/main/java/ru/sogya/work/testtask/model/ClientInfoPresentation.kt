@@ -1,4 +1,4 @@
-package ru.sogya.work.testtask.mdoel
+package ru.sogya.work.testtask.model
 
 import ru.sogya.work.testtask.domain.models.ClientInfoDomain
 

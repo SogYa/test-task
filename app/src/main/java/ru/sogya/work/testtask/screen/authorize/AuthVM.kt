@@ -9,7 +9,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import ru.sogya.work.testtask.domain.usecase.InsertClientInfoUseCase
 import ru.sogya.work.testtask.mapper.ClientInfoPresentationMapper
-import ru.sogya.work.testtask.mdoel.ClientInfoPresentation
+import ru.sogya.work.testtask.model.ClientInfoPresentation
 import javax.inject.Inject
 
 @HiltViewModel
