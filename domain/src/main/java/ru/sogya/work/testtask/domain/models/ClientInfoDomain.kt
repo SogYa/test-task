@@ -1,8 +1,8 @@
 package ru.sogya.work.testtask.domain.models
 
 interface ClientInfoDomain {
-    val id: Int
-    val code: Int
+    val id: String
+    val code: String
     val name: String
     val surname: String
 }
