@@ -9,7 +9,9 @@
         android:label="HomeFragment" >
         <action
             android:id="@+id/action_homeFragment_to_authFragment"
-            app:destination="@id/authFragment" />
+            app:destination="@id/authFragment"
+            app:enterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/authFragment"
