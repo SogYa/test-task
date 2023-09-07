@@ -12,6 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TestTask"
         tools:targetApi="34"
-        android:name=".app.App"/>
+        android:name=".app.App">
 
+        <activity
+            android:name=".screen.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:theme="@style/Theme.TestTask"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="ru.sogya.work.testtask" />
+
+            </intent-filter>
+        </activity>
+    </application>
 </manifest>
