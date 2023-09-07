@@ -18,8 +18,9 @@
             android:name=".screen.MainActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true"
+            android:enableOnBackInvokedCallback="true"
             android:theme="@style/Theme.TestTask"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
