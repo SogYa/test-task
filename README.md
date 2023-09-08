@@ -1,6 +1,5 @@
 # Тестовое задание
-Тестовое задание для вакансии android developer. Реализовано с использованием следующих технологий:
-- Clean Architecure + MVVM
-- Room
-- Flow
-- Hilt
+Тестовое задание на вакансию android developer. 
+- Реализовано с использованием локальной базы данных Room в связке с Flow
+- Clean Architecture + MVVM
+- В качестве di фреймворка Hilt
