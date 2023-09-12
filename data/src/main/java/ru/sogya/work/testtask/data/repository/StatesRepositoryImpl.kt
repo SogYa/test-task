@@ -9,6 +9,6 @@ import ru.sogya.work.testtask.domain.repository.StatesRepository
 class StatesRepositoryImpl : StatesRepository {
     private val apiService = NetworkService.apiService
     override fun getAllStates(): Flow<List<StateDomain>> = flow {
-        emit(apiService.getAllStates())
+        emit(apiService.getAllStates().stateList)
     }
 }
