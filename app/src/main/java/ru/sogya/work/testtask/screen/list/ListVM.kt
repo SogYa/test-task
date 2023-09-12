@@ -13,13 +13,13 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import ru.sogya.work.testtask.domain.usecase.states.GetAllStatesUseCase
 import ru.sogya.work.testtask.mapper.StateMapDomainMapper
-import ru.sogya.work.testtask.model.StatePresentation
+import ru.sogya.work.testtask.model.StateItem
 import javax.inject.Inject
 
 @HiltViewModel
 class ListVM @Inject constructor(getAllStatesUseCase: GetAllStatesUseCase) :
     ViewModel() {
-    private val stateLiveData = MutableLiveData<List<StatePresentation>>()
+    private val stateLiveData = MutableLiveData<List<StateItem>>()
 
     init {
         viewModelScope.launch {
@@ -28,10 +28,10 @@ class ListVM @Inject constructor(getAllStatesUseCase: GetAllStatesUseCase) :
             }.map {
                 StateMapDomainMapper(it).toPresentationMap()
             }.collect {
-                Log.d("Map", it.toString())
+                stateLiveData.postValue(it)
             }
         }
     }
 
-    fun getStateLiveData(): LiveData<List<StatePresentation>> = stateLiveData
+    fun getStateLiveData(): LiveData<List<StateItem>> = stateLiveData
 }
