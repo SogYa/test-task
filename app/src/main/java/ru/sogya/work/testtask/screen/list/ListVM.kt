@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import ru.sogya.work.testtask.domain.usecase.states.GetAllStatesUseCase
-import ru.sogya.work.testtask.mapper.StateListDomainMapper
+import ru.sogya.work.testtask.mapper.StateMapDomainMapper
 import ru.sogya.work.testtask.model.StatePresentation
 import javax.inject.Inject
 
@@ -26,9 +26,9 @@ class ListVM @Inject constructor(getAllStatesUseCase: GetAllStatesUseCase) :
             getAllStatesUseCase().flowOn(Dispatchers.IO).catch {
                 Log.e("StateListError", it.message.toString())
             }.map {
-                StateListDomainMapper(it).toPresentationList()
+                StateMapDomainMapper(it).toPresentationMap()
             }.collect {
-                stateLiveData.postValue(it)
+                Log.d("Map", it.toString())
             }
         }
     }
