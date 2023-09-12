@@ -7,7 +7,9 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import ru.sogya.work.testtask.data.repository.LocalDatabaseRepositoryImpl
+import ru.sogya.work.testtask.data.repository.StatesRepositoryImpl
 import ru.sogya.work.testtask.domain.repository.LocalDatabaseRepository
+import ru.sogya.work.testtask.domain.repository.StatesRepository
 import javax.inject.Singleton
 
 @Module
@@ -17,4 +19,8 @@ class DataModule {
     @Singleton
     fun provideLocalDatabaseRepository(@ApplicationContext context: Context): LocalDatabaseRepository =
         LocalDatabaseRepositoryImpl(context = context)
+
+    @Provides
+    @Singleton
+    fun provideStatesRepository(): StatesRepository = StatesRepositoryImpl()
 }
