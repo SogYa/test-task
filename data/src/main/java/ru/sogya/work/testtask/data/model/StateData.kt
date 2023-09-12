@@ -5,6 +5,6 @@ import ru.sogya.work.testtask.domain.models.StateDomain
 
 data class StateData(
     @SerializedName("date")
-    override val date: String,
+    override var date: String,
     @SerializedName("name")
     override val names: List<String>) : StateDomain
