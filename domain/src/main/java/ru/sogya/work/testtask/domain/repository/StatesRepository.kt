@@ -4,5 +4,5 @@ import kotlinx.coroutines.flow.Flow
 import ru.sogya.work.testtask.domain.models.StateDomain
 
 interface StatesRepository {
-    fun getAllStates(): Flow<List<StateDomain>>
+    fun getAllStates(): Flow<Map<String, List<StateDomain>>>
 }
