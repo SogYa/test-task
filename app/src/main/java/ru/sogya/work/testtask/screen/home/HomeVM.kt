@@ -25,7 +25,7 @@ class HomeVM @Inject constructor(
     init {
         viewModelScope.launch {
             getClientInfoUseCase().flowOn(Dispatchers.IO).catch {
-                Log.d("GetClientError", it.message.toString())
+                Log.e("GetClientError", it.message.toString())
             }.map {
                 ClientInfoDomainMapper(it).toPresentation()
             }.collect {

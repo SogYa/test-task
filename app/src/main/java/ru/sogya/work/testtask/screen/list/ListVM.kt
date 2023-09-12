@@ -24,7 +24,7 @@ class ListVM @Inject constructor(getAllStatesUseCase: GetAllStatesUseCase) :
     init {
         viewModelScope.launch {
             getAllStatesUseCase().flowOn(Dispatchers.IO).catch {
-                Log.d("StateListError", it.message.toString())
+                Log.e("StateListError", it.message.toString())
             }.map {
                 StateListDomainMapper(it).toPresentationList()
             }.collect {

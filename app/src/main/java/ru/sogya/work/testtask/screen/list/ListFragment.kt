@@ -1,6 +1,7 @@
 package ru.sogya.work.testtask.screen.list
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,8 +33,8 @@ class ListFragment : Fragment(R.layout.fragment_list) {
 
     override fun onStart() {
         super.onStart()
-        vm.getStateLiveData().observe(viewLifecycleOwner){
-            
+        vm.getStateLiveData().observe(viewLifecycleOwner) {
+            Log.d("List", it.toString())
         }
     }
 
