@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
         android:name="ru.sogya.work.testtask.screen.home.HomeFragment"
-        android:label="HomeFragment" >
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_authFragment"
             app:destination="@id/authFragment"
             app:enterAnim="@anim/fade_in"
             app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_listFragment"
+            app:destination="@id/listFragment" />
     </fragment>
     <fragment
         android:id="@+id/authFragment"
         android:name="ru.sogya.work.testtask.screen.authorize.AuthFragment"
-        android:label="AuthFragment" />
+        android:label="AuthFragment"
+        tools:layout="@layout/fragment_auth"/>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="ru.sogya.work.testtask.screen.list.ListFragment"
+        android:label="ListFragment"
+        tools:layout="@layout/fragment_list"/>
 </navigation>
