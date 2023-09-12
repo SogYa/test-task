@@ -29,7 +29,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onStart() {
         super.onStart()
         vm.getClientLiveData().observe(viewLifecycleOwner) {
-            if (it!=null){
+            if (it != null) {
                 binding.textViewName.text = it.name
                 binding.textViewSurname.text = it.surname
             }
@@ -40,6 +40,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
         binding.bankItem.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_authFragment)
+        }
+        binding.goToList.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_listFragment)
         }
     }
 
